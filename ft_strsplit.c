@@ -6,13 +6,13 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 20:04:32 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/11 20:36:56 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/11 20:46:48 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**word_location(char const *s, char c)
+static char	**word_location(char const *s, char c)
 {
 	char	**word_prop;
 	char	*start;
@@ -30,7 +30,7 @@ char	**word_location(char const *s, char c)
 	return (word_prop);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	size_t	numo_wds;
 	char	**tbl;
