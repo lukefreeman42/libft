@@ -6,17 +6,17 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 00:25:24 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/10 00:48:01 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/12 16:16:24 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, t_list *(*f)(t_list *link))
+void	ft_lstiter(t_list *lst, void (*f)(t_list *link))
 {
 	if (lst != NULL)
 	{
 		ft_lstiter(lst->next, (*f));
-		lst = (*f)(lst);
+		(*f)(lst);
 	}
 }

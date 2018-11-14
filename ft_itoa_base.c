@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 18:41:58 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/10 14:10:38 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/12 13:02:13 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ char	*ft_itoa_base(int n, int base)
 	flag = 0;
 	if (n < 0)
 		flag = 1;
-	str = ft_strnew(ft_intlen(n, base) + flag);
+	if(!(str = ft_strnew(ft_intlen(n, base) + flag)))
+		return (NULL);
 	*str = '0';
 	if (n == -2147483648)
-		return ("-2147483648");
+	{
+		str = ft_strncpy(str, "-2147483648", 11);
+		return (str);
+	}	
 	p = (void*)str;
 	if (flag)
 		n *= -1;
