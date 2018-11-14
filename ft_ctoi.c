@@ -6,13 +6,13 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 18:01:06 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/08 18:02:35 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/13 16:45:45 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ctoi(int c)
+int	ft_ctoi(char c)
 {
 	if (ft_isdigit(c))
 		return (c - 48);
