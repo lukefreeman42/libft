@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 09:03:19 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/07 09:03:21 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/13 16:37:48 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_bzero(void *s, size_t n)
 {
+	if (!s)
+		return (NULL);
 	while (n--)
 		*(uint8_t*)s++ = '\0';
 	return (s);
