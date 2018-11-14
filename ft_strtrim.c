@@ -6,40 +6,62 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 20:08:22 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/13 16:12:52 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/13 20:46:18 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *str)
+static const char	*parse_ws(const char *str)
 {
-	if (str) //
-	{ //
-		char	*start;
-		char	*end;
-		char	*trim;
-		size_t	len;
+	while (ft_isws(*str))
+		str++;
+	return (str);
+}
 
-		len = 0;
-		while (ft_isws(*str))
-		{
-			str++;
-			if (!*str)
-				return ("");
-		}
-		start = (char*)str;
-		while (*str)
-			str++;
+static const char	*parse_str(const char *str)
+{
+	while (*str)
+		str++;
+	str--;
+	return (str);
+}
+
+static const char	*parse_ws_r(const char *str)
+{
+	while (ft_isws(*str))
 		str--;
-		while (ft_isws(*str))
-			str--;
-		end = (char*)str;
+	return (str);
+}
+
+static const char	*parse_toend(const char *str)
+{
+	str = parse_str(str);
+	str = parse_ws_r(str);
+	return (str);
+}
+
+char				*ft_strtrim(char const *str)
+{
+	char	*start;
+	char	*end;
+	char	*trim;
+	size_t	len;
+
+	if (str)
+	{
+		len = 0;
+		str = parse_ws(str);
+		if (!*str)
+			return ("");
+		start = (char*)str;
+		end = (char*)parse_toend(str);
 		len = end + 1 - start;
 		if (!(trim = ft_strnew(len)))
 			return (NULL);
 		trim = ft_strncpy(trim, start, len);
 		return (trim);
-	} //
-	return ((char*)0); //
+	}
+	else
+		return (NULL);
 }
