@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 17:59:39 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/13 16:32:45 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/13 16:36:06 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 static const char	*skip_ws(const char *str)
 {
-	while(ft_isws(*str))
+	while (ft_isws(*str))
 		str++;
 	return (str);
 }
-
 
 static int			set_flag(const char *str)
 {
@@ -30,8 +29,8 @@ static int			set_flag(const char *str)
 
 int					ft_atoi(const char *str)
 {
-	long int tot;
-	int	flag;
+	long int	tot;
+	int			flag;
 
 	flag = 0;
 	tot = 0;
