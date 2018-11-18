@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 19:28:53 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/13 16:11:52 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/17 15:38:57 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	if(s1 && s2)
+	if (s1 && s2)
 	{
 		if (ft_strcmp(s1, s2) == 0)
 			return (1);

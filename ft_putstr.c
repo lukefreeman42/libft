@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 18:59:59 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/08 19:00:10 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/13 16:56:26 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putstr(const char *str)
 {
-	while (*str)
-		ft_putchar(*str++);
+	if (str)
+	{
+		while (*str)
+			ft_putchar(*str++);
+	}
 }

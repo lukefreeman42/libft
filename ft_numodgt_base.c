@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_numodgt_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 19:29:17 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/17 15:40:18 by llelias          ###   ########.fr       */
+/*   Created: 2018/11/13 17:12:53 by llelias           #+#    #+#             */
+/*   Updated: 2018/11/13 17:13:01 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *str, char (*f) (unsigned int, char))
+size_t		ft_numodgt_base(int n, int base)
 {
-	char			*map;
-	unsigned int	i;
+	size_t len;
 
-	if (str && (*f))
-	{
-		i = 0;
-		if (!(map = ft_strnew(ft_strlen(str))))
-			return (NULL);
-		while (*(str + i))
-		{
-			*(map + i) = (*f)(i, *(str + i));
-			i++;
-		}
-		return (map);
-	}
-	return (NULL);
+	len = 1;
+	while (n /= base)
+		len++;
+	return (len);
 }

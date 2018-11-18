@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 18:59:26 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/10 18:57:25 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/13 17:52:37 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 
 void	ft_putendl_fd(const char *str, int fd)
 {
-	char	*str_endl;
+	char	*str_nl;
 	size_t	len;
 
-	len = ft_strlen(str);
-	str_endl = ft_strnew(len + 1);
-	str_endl = ft_strncpy(str_endl, str, len);
-	str_endl = ft_strncat(str_endl, "\n", 1);
-	ft_putstr_fd(str_endl, fd);
-	ft_strdel(&str_endl);
+	if (str)
+	{
+		len = ft_strlen(str);
+		if ((str_nl = ft_strnew(len + 1)))
+		{
+			str_nl = ft_strncpy(str_nl, str, len);
+			str_nl = ft_strncat(str_nl, "\n", 1);
+			ft_putstr_fd(str_nl, fd);
+			ft_strdel(&str_nl);
+		}
+	}
 }
