@@ -53,7 +53,10 @@ char				*ft_strtrim(char const *str)
 		len = 0;
 		str = parse_ws(str);
 		if (!*str)
-			return ("");
+		{
+			trim = ft_strnew(0);
+			return (trim);
+		}
 		start = (char*)str;
 		end = (char*)parse_toend(str);
 		len = end + 1 - start;
