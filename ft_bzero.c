@@ -15,6 +15,6 @@
 void	*ft_bzero(void *s, size_t n)
 {
 	while (n--)
-		*(uint8_t*)s++ = '\0';
+		*(u_int8_t*)s++ = '\0';
 	return (s);
 }

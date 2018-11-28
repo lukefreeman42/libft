@@ -20,6 +20,6 @@ void	*ft_memrcpy(void *dst, const void *src, size_t n)
 	dst += n - 1;
 	src += n - 1;
 	while (n--)
-		*(uint8_t*)dst-- = *(uint8_t*)src--;
+		*(u_int8_t*)dst-- = *(u_int8_t*)src--;
 	return (p);
 }
