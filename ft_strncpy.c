@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:09:30 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/07 15:09:37 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/28 14:07:56 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	void *p;
+	char *p;
 
-	p = (void*)dst;
+	p = dst;
 	while (*src && n)
 	{
 		*dst++ = *src++;
@@ -24,5 +24,5 @@ char	*ft_strncpy(char *dst, const char *src, size_t n)
 	}
 	while (n--)
 		*dst++ = '\0';
-	return ((char*)p);
+	return (p);
 }
