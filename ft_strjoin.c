@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 19:24:26 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/17 15:42:36 by llelias          ###   ########.fr       */
+/*   Updated: 2018/11/28 19:35:27 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*cat;
-	void	*p;
+	char	*p;
 	size_t	len1;
 	size_t	len2;
 
@@ -25,11 +25,11 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		len2 = ft_strlen(s2);
 		if (!(cat = ft_strnew(len1 + len2)))
 			return (NULL);
-		p = (void*)cat;
+		p = cat;
 		cat = ft_strncpy(cat, s1, len1);
 		cat += len1;
 		cat = ft_strncpy(cat, s2, len2);
-		return ((char*)p);
+		return (p);
 	}
 	return (NULL);
 }
