@@ -5,20 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 22:23:45 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/08 18:45:36 by llelias          ###   ########.fr       */
+/*   Created: 2018/11/29 08:21:36 by llelias           #+#    #+#             */
+/*   Updated: 2018/11/29 08:29:55 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	*ft_memalloc(size_t n)
 {
-	void *chunk;
+	void *x;
 
-	chunk = malloc(size);
-	if (!chunk)
-		return (NULL);
-	ft_bzero(chunk, size);
-	return (chunk);
+	if (n)
+		if ((x = malloc(n)))
+			return (ft_memset(x, 0, n));
+	return (NULL);
 }

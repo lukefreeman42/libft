@@ -5,18 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 19:22:30 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/12 16:20:19 by llelias          ###   ########.fr       */
+/*   Created: 2018/11/30 08:24:33 by llelias           #+#    #+#             */
+/*   Updated: 2018/11/30 08:26:16 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **str)
+void	ft_strdel(char *s)
 {
-	if (str)
-	{
-		free(*str);
-		*str = NULL;
-	}
+	s = (char*)ft_memset(s, 0, ft_strlen(s));
+	free(s);
+	s = NULL;
 }

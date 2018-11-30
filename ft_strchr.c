@@ -5,19 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 19:00:21 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/28 19:18:54 by llelias          ###   ########.fr       */
+/*   Created: 2018/11/29 05:23:57 by llelias           #+#    #+#             */
+/*   Updated: 2018/11/30 07:03:02 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while (*str)
+	if (s)
 	{
-		if (*str++ == (unsigned char) c)
-			return ((char*)str);
+		if (c == 0)
+			while (1)
+				if (!*s++)
+					return ((char*)s - 1);
+		while (*s)
+			if (*s++ == (unsigned char)c)
+				return ((char*)s - 1);
 	}
 	return (NULL);
 }

@@ -5,20 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 09:55:12 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/12 16:06:02 by llelias          ###   ########.fr       */
+/*   Created: 2018/11/29 08:19:29 by llelias           #+#    #+#             */
+/*   Updated: 2018/11/30 06:43:32 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_strdup(const char *s)
 {
-	char	*cpy;
-	size_t	len;
+	char	*dup;
+	size_t	n;
+	size_t	status;
 
-	len = ft_strlen(str);
-	if (!(cpy = ft_strnew(len)))
-		return (NULL);
-	return (ft_strncpy(cpy, str, len));
+	if (s)
+	{
+		n = ft_strlen(s);
+		if ((dup = ft_strnew(n)))
+			if ((status = ft_strlcpy(dup, s, n)) == n)
+				return (dup);
+	}
+	return (NULL);
 }
