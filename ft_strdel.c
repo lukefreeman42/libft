@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 08:24:33 by llelias           #+#    #+#             */
-/*   Updated: 2018/12/02 08:50:38 by llelias          ###   ########.fr       */
+/*   Updated: 2018/12/02 09:23:28 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_strdel(char **s)
 {
 	if (s)
 	{
-		*s = (char*)ft_memset(*s, 0, ft_strlen(*s));
 		free(*s);
 		*s = NULL;
 	}
