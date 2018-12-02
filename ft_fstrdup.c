@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 08:20:51 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/30 08:24:05 by llelias          ###   ########.fr       */
+/*   Updated: 2018/12/02 08:49:08 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ char	*ft_fstrdup(char *s)
 	char *dup;
 
 	dup = ft_strdup(s);
-	ft_strdel(s);
+	ft_strdel(&s);
 	return (dup);
 }
