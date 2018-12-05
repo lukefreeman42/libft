@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fstrdup.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 08:20:51 by llelias           #+#    #+#             */
-/*   Updated: 2018/12/03 19:41:45 by llelias          ###   ########.fr       */
+/*   Created: 2018/12/05 10:14:23 by llelias           #+#    #+#             */
+/*   Updated: 2018/12/05 15:58:39 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_fstrdup(char *s)
+t_file	*ft_filenew(int fd)
 {
-	char *dup;
+	t_file *file;
 
-	if (s)
-		if ((dup = ft_strdup(s)))
-		{
-			ft_strdel(&s);
-			return (dup);
-		}
-	return (NULL);
+	file = (t_file*)malloc(sizeof(t_file));
+	if (!file)
+		return (NULL);
+	file->s = ft_strnew(0);
+	file->fd = fd;
+	file->next = NULL;
+	return (file);
 }
+
