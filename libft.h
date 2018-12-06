@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 07:53:49 by llelias           #+#    #+#             */
-/*   Updated: 2018/12/05 15:51:31 by llelias          ###   ########.fr       */
+/*   Updated: 2018/12/06 13:59:46 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,6 @@
 #  define NULL (void*)0
 # endif
 
-typedef struct	s_file
-{
-	char			*s;
-	int				fd;
-	struct s_file	*next;
-}				t_file;
-
-t_file	*ft_filenew(int fd);
 void	ft_strdel(char **s);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t n);
