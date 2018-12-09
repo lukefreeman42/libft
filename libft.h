@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 07:53:49 by llelias           #+#    #+#             */
-/*   Updated: 2018/12/08 14:05:00 by llelias          ###   ########.fr       */
+/*   Updated: 2018/12/06 13:59:46 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n);
 void	*ft_memalloc(size_t n);
 void	*ft_memset(void *dst, int c, size_t n);
 char	*ft_strdup(const char *s);
-char	*ft_fstrdup(char **s);
+char	*ft_fstrdup(char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strnew(size_t n);
 char	*ft_strjoin(const char *s1, const char *s2);
