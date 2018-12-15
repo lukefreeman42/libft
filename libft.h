@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 07:53:49 by llelias           #+#    #+#             */
-/*   Updated: 2018/12/14 09:49:53 by llelias          ###   ########.fr       */
+/*   Updated: 2018/12/15 10:24:51 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #  define NULL (void*)0
 # endif
 
+int		ft_power(int num, int exponent);
 void	ft_putstr(char *s);
 void	ft_strdel(char **s);
 size_t	ft_strlen(const char *s);
