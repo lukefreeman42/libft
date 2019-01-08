@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/29 08:28:07 by llelias           #+#    #+#             */
-/*   Updated: 2019/01/08 15:14:08 by llelias          ###   ########.fr       */
+/*   Created: 2018/11/30 07:13:50 by llelias           #+#    #+#             */
+/*   Updated: 2019/01/08 15:42:20 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Returns an zero'd string of size N + 1
+** Concatenates S(ou)RC(e) to D(e)ST(ination) for a total strlen of N bytes.
+** Returns the number of non NULL bytes copied from DST onto SRC.
 */
 
-char	*ft_strnew(size_t n)
+size_t	ft_strwcat(char *dst, const char *src, size_t n)
 {
-	return ((char*)ft_memalloc(n + 1));
+	size_t status;
+
+	status = 0;
+	if (dst && src)
+	{
+		while (n--)
+		{
+			if (*dst)
+				dst++;
+			else
+			{
+				status++;
+				*dst++ = *src++;
+			}
+		}
+	}
+	return (status);
 }

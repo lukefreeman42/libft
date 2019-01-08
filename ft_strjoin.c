@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 07:03:47 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/30 07:12:51 by llelias          ###   ########.fr       */
+/*   Updated: 2019/01/08 15:44:24 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		n1 = ft_strlen(s1);
 		n2 = ft_strlen(s2);
 		if ((join = ft_strnew(n1 + n2)))
-			if ((status = ft_strlcpy(join, s1, n1)) == n1)
-				if ((status = ft_strlcat(join, s2, n1 + n2)) == n2)
+			if ((status = ft_strwcpy(join, s1, n1)) == n1)
+				if ((status = ft_strwcat(join, s2, n1 + n2)) == n2)
 					return (join);
 	}
 	return (NULL);

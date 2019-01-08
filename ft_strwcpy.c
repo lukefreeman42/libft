@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/29 08:28:07 by llelias           #+#    #+#             */
-/*   Updated: 2019/01/08 15:14:08 by llelias          ###   ########.fr       */
+/*   Created: 2018/11/29 08:34:38 by llelias           #+#    #+#             */
+/*   Updated: 2019/01/08 15:35:35 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Returns an zero'd string of size N + 1
+**	Copies N(um) bytes from S(ou)RC(e) to D(e)ST(ination) and
+**	returns the number of non NULL bytes copied to DST.
 */
 
-char	*ft_strnew(size_t n)
+size_t	ft_strwcpy(char *dst, const char *src, size_t n)
 {
-	return ((char*)ft_memalloc(n + 1));
+	size_t cp_n;
+
+	cp_n = 0;
+	if (dst && src)
+		while (n--)
+		{
+			if (*src)
+				cp_n++;
+			*dst++ = (*src) ? *src++ : '\0';
+		}
+	return (cp_n);
 }

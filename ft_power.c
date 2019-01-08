@@ -6,11 +6,15 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/15 10:19:22 by llelias           #+#    #+#             */
-/*   Updated: 2018/12/21 19:52:18 by llelias          ###   ########.fr       */
+/*   Updated: 2019/01/08 15:19:21 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Returns the evaluation of N(um) to the exponent P(ower)
+*/
 
 static int	error(void)
 {

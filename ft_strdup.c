@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 08:19:29 by llelias           #+#    #+#             */
-/*   Updated: 2018/11/30 06:43:32 by llelias          ###   ########.fr       */
+/*   Updated: 2019/01/08 15:44:08 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s)
 	{
 		n = ft_strlen(s);
 		if ((dup = ft_strnew(n)))
-			if ((status = ft_strlcpy(dup, s, n)) == n)
+			if ((status = ft_strwcpy(dup, s, n)) == n)
 				return (dup);
 	}
 	return (NULL);
