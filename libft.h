@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 07:53:49 by llelias           #+#    #+#             */
-/*   Updated: 2019/01/08 15:43:39 by llelias          ###   ########.fr       */
+/*   Updated: 2019/01/09 16:35:36 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 int		ft_nsqr(int num);
 int		ft_power(int num, int exponent);
-void	ft_putstr(char *s);
+void	ft_putstr(const char *s);
 void	ft_strdel(char **s);
 size_t	ft_strlen(const char *s);
 size_t	ft_strwcpy(char *dst, const char *src, size_t n);
