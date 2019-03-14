@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 07:53:49 by llelias           #+#    #+#             */
-/*   Updated: 2019/01/09 16:35:36 by llelias          ###   ########.fr       */
+/*   Updated: 2019/03/14 09:43:42 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@
 #  define NULL (void*)0
 # endif
 
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}				t_list;
+
+t_list	*ft_lstadd(t_list *lst, t_list *nnode);
+t_list	*ft_lstnew(void	const *content, size_t content_size);
+
 int		ft_nsqr(int num);
 int		ft_power(int num, int exponent);
 void	ft_putstr(const char *s);
@@ -26,6 +36,7 @@ void	ft_strdel(char **s);
 size_t	ft_strlen(const char *s);
 size_t	ft_strwcpy(char *dst, const char *src, size_t n);
 size_t	ft_strwcat(char *dst, const char *src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memalloc(size_t n);
 void	*ft_memset(void *dst, int c, size_t n);
 char	*ft_strdup(const char *s);
