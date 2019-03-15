@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 07:53:49 by llelias           #+#    #+#             */
-/*   Updated: 2019/03/14 09:43:42 by llelias          ###   ########.fr       */
+/*   Updated: 2019/03/15 12:21:37 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,5 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strnew(size_t n);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_fstrjoin(char *s1, char *s2, int x);
-char    *ft_itoa_base(int num, int base);
-
-char	*ft_itoa_g(void *);
+char    *ft_itoa_base(long long num, int base);
 #endif
