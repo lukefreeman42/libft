@@ -10,6 +10,14 @@ static int num_of_digits(int num, int base)
     return (i);
 }
 
+static char    convertion(int dig)
+{
+    if (dig < 10)
+        return (dig + 48);
+    else
+        return (dig + 55);
+}
+
 char    *ft_itoa_base(long long num, int base)
 {
     char *str;
@@ -27,7 +35,7 @@ char    *ft_itoa_base(long long num, int base)
     p = str;
     while (num)
     {
-        *str++ = (num % base) + 48;
+        *str++ = convertion(num % base);
         num /= base;
     }
     if (flag)
