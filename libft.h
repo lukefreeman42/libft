@@ -31,6 +31,7 @@ t_list	*ft_lstnew(void	const *content, size_t content_size);
 
 int		ft_nsqr(int num);
 int		ft_power(int num, int exponent);
+void    ft_strrev(char *str);
 void	ft_putstr(const char *s);
 void	ft_strdel(char **s);
 size_t	ft_strlen(const char *s);
@@ -45,4 +46,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strnew(size_t n);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_fstrjoin(char *s1, char *s2, int x);
+char    *ft_itoa_base(int num, int base);
+
+char	*ft_itoa_g(void *);
 #endif
