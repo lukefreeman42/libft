@@ -6,7 +6,7 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 07:53:49 by llelias           #+#    #+#             */
-/*   Updated: 2019/03/15 12:21:37 by llelias          ###   ########.fr       */
+/*   Updated: 2019/03/15 22:44:26 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct	s_list
 t_list	*ft_lstadd(t_list *lst, t_list *nnode);
 t_list	*ft_lstnew(void	const *content, size_t content_size);
 
+char	to_lc(char c);
 int		ft_nsqr(int num);
 int		ft_power(int num, int exponent);
 void    ft_strrev(char *str);
