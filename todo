@@ -1,0 +1,3 @@
+Change all (char*)malloc(x) to ft_strnew(x-1);
+
+Prevents memory problems that arrise from non-0 memory;
