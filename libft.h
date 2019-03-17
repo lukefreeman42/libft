@@ -30,6 +30,7 @@ t_list	*ft_lstadd(t_list *lst, t_list *nnode);
 t_list	*ft_lstnew(void	const *content, size_t content_size);
 
 char	to_lc(char c);
+int		is_num(char c);
 int		ft_nsqr(int num);
 int		ft_power(int num, int exponent);
 void    ft_strrev(char *str);
