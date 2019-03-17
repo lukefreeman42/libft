@@ -32,6 +32,7 @@ t_list	*ft_lstnew(void	const *content, size_t content_size);
 char	to_lc(char c);
 int		is_num(char c);
 int		ft_nsqr(int num);
+int		ft_atoi(char *num);
 int		ft_power(int num, int exponent);
 void    ft_strrev(char *str);
 void	ft_putstr(const char *s);
