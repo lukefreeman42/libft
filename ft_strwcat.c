@@ -28,7 +28,7 @@ size_t	ft_strwcat(char *dst, const char *src, size_t n)
 		{
 			if (*dst)
 				dst++;
-			else
+			else if (*src)
 			{
 				status++;
 				*dst++ = *src++;
