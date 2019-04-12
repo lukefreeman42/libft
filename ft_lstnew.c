@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/13 14:01:39 by llelias           #+#    #+#             */
-/*   Updated: 2019/03/13 14:44:15 by llelias          ###   ########.fr       */
+/*   Created: 2019/04/11 19:01:25 by llelias           #+#    #+#             */
+/*   Updated: 2019/04/11 19:01:40 by llelias          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void const *content, size_t content_size)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *new;
 
@@ -31,5 +31,5 @@ t_list *ft_lstnew(void const *content, size_t content_size)
 		new->content_size = content_size;
 	}
 	new->next = NULL;
-	return(new);
+	return (new);
 }
